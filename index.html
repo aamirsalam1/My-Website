@@ -5,133 +5,185 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BuildCraft Contracting L.L.C – Construction, Design & Estimation</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lato:wght@300;400;700&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--cream:#f5ede0;--sand:#e8d5b7;--tan:#c9a97a;--brown:#8b6340;--dark-brown:#4a3320;--charcoal:#2c2218;--rust:#b05c2a;--warm-white:#faf6f0;--text:#3a2a1a}
-    html{scroll-behavior:smooth}
-    body{font-family:'Lato',sans-serif;background:var(--warm-white);color:var(--text);overflow-x:hidden}
-    nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(74,51,32,0.97);backdrop-filter:blur(8px);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px;border-bottom:2px solid var(--tan)}
-    .nav-logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--sand);letter-spacing:1px}
-    .nav-logo span{color:var(--tan)}
-    .nav-links{display:flex;gap:2rem;list-style:none}
-    .nav-links a{color:var(--sand);text-decoration:none;font-size:0.85rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;transition:color 0.2s}
-    .nav-links a:hover{color:var(--tan)}
-    .nav-cta{background:var(--rust);color:#fff !important;padding:8px 20px;border-radius:2px}
-    #hero{min-height:100vh;background:linear-gradient(160deg,rgba(44,34,24,0.82) 0%,rgba(139,99,64,0.55) 100%),url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80') center/cover no-repeat;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:0 8%;position:relative;overflow:hidden}
-    #hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(transparent,var(--warm-white))}
-    .hero-tag{font-size:0.78rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--tan);margin-bottom:1.2rem;opacity:0;animation:fadeUp 0.8s 0.2s forwards}
-    .hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,7vw,5.5rem);font-weight:900;line-height:1.1;color:var(--cream);max-width:720px;opacity:0;animation:fadeUp 0.8s 0.4s forwards}
-    .hero-title em{color:var(--tan);font-style:normal}
-    .hero-sub{margin-top:1.4rem;font-size:1.1rem;font-weight:300;color:var(--sand);max-width:500px;line-height:1.7;opacity:0;animation:fadeUp 0.8s 0.6s forwards}
-    .hero-btns{display:flex;gap:1rem;margin-top:2.2rem;flex-wrap:wrap;opacity:0;animation:fadeUp 0.8s 0.8s forwards}
-    .btn-primary{background:var(--rust);color:#fff;padding:14px 32px;border:none;border-radius:2px;font-size:0.85rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:background 0.2s,transform 0.15s}
-    .btn-outline{background:transparent;color:var(--cream);padding:14px 32px;border:2px solid var(--tan);border-radius:2px;font-size:0.85rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:all 0.2s}
-    .stats-bar{display:flex;background:var(--dark-brown);border-top:3px solid var(--tan)}
-    .stat{flex:1;text-align:center;padding:2rem 1rem;border-right:1px solid rgba(201,169,122,0.2)}
-    .stat:last-child{border-right:none}
-    .stat-num{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;color:var(--tan)}
-    .stat-label{font-size:0.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sand);margin-top:4px}
-    section{padding:90px 8%}
-    .section-tag{font-size:0.75rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--rust);margin-bottom:0.7rem}
-    .section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--dark-brown);line-height:1.2;max-width:580px}
-    .section-sub{margin-top:1rem;font-size:1rem;color:#7a6050;line-height:1.8;max-width:560px}
-    .divider{width:60px;height:4px;background:var(--tan);margin:1.2rem 0}
-    #about{background:var(--warm-white);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
-    .about-img{border-radius:4px;overflow:hidden;position:relative;height:460px}
-    .about-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
-    .about-badge{position:absolute;bottom:24px;right:24px;background:var(--dark-brown);color:var(--cream);padding:16px 20px;text-align:center;border-left:4px solid var(--rust)}
-    .about-badge strong{font-family:'Playfair Display',serif;display:block;font-size:2rem;color:var(--tan)}
-    .about-badge span{font-size:0.72rem;letter-spacing:2px;text-transform:uppercase}
-    #services{background:var(--cream)}
-    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:3rem}
-    .service-card{background:var(--warm-white);border:1px solid var(--sand);padding:2.2rem 1.8rem;border-radius:4px;transition:transform 0.25s,box-shadow 0.25s;position:relative;overflow:hidden}
-    .service-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:0;background:var(--rust);transition:height 0.3s}
-    .service-card:hover::before{height:100%}
-    .service-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(74,51,32,0.14)}
-    .service-icon{font-size:2.4rem;margin-bottom:1rem}
-    .service-name{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--dark-brown);margin-bottom:0.6rem}
-    .service-desc{font-size:0.92rem;color:#7a6050;line-height:1.75}
-    #process{background:var(--dark-brown);color:var(--cream)}
-    #process .section-title{color:var(--sand)}
-    .process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:3.5rem;position:relative}
-    .step{text-align:center;padding:0 1.5rem}
-    .step-num{width:72px;height:72px;background:var(--rust);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;margin:0 auto 1.2rem}
-    .step-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--sand);margin-bottom:0.5rem}
-    .step-desc{font-size:0.85rem;color:var(--tan);line-height:1.65}
-    #projects{background:var(--warm-white)}
-    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:3rem}
-    .proj-card{border-radius:4px;overflow:hidden;position:relative;cursor:zoom-in;height:260px}
-    .proj-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
-    .proj-card:hover img{transform:scale(1.06)}
-    .proj-overlay{position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(44,34,24,0.88));display:flex;flex-direction:column;justify-content:flex-end;padding:1.4rem;opacity:0;transition:opacity 0.3s}
-    .proj-card:hover .proj-overlay{opacity:1}
-    .proj-cat{font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--tan);margin-bottom:4px}
-    .proj-name{font-family:'Playfair Display',serif;font-size:1.1rem;color:#fff}
-    #why{background:var(--sand)}
-    .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-top:3rem}
-    .why-item{display:flex;gap:1.2rem;align-items:flex-start}
-    .why-icon{width:50px;height:50px;min-width:50px;background:var(--rust);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
-    .why-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--dark-brown);margin-bottom:0.3rem}
-    .why-desc{font-size:0.88rem;color:#6a5040;line-height:1.7}
-    #testimonials{background:var(--cream)}
-    .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.8rem;margin-top:3rem}
-    .testi-card{background:var(--warm-white);border:1px solid var(--sand);padding:2rem;border-radius:4px;border-top:4px solid var(--rust)}
-    .testi-text{font-size:0.95rem;color:#5a4030;line-height:1.8;font-style:italic;margin-bottom:1.2rem}
-    .testi-author{display:flex;align-items:center;gap:0.9rem}
-    .testi-avatar{width:44px;height:44px;border-radius:50%;background:var(--tan);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--dark-brown)}
-    .testi-name{font-weight:700;color:var(--dark-brown);font-size:0.9rem}
-    .testi-role{font-size:0.78rem;color:var(--brown)}
-    #contact{background:var(--dark-brown);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
-    #contact .section-title{color:var(--sand)}
-    #contact .section-sub{color:var(--tan)}
-    .contact-info{margin-top:2rem;display:flex;flex-direction:column;gap:1.5rem}
-    .contact-item{display:flex;gap:1rem;align-items:flex-start}
-    .c-icon{font-size:1.3rem;min-width:28px;margin-top:2px}
-    .c-label{font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--tan);margin-bottom:3px}
-    .c-val{color:var(--sand);font-size:0.95rem}
-    #contact form{background:var(--cream);padding:2.5rem;border-radius:4px}
-    .form-title{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--dark-brown);margin-bottom:1.5rem}
-    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-    .form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:1rem}
-    label{font-size:0.78rem;font-weight:700;letter-spacing:1px;color:var(--brown);text-transform:uppercase}
-    input,textarea,select{padding:11px 14px;border:1px solid var(--sand);border-radius:2px;background:var(--warm-white);font-family:'Lato',sans-serif;font-size:0.92rem;color:var(--text);width:100%}
-    textarea{resize:vertical;min-height:110px}
-    .form-submit{width:100%;padding:14px;background:var(--rust);color:#fff;border:none;border-radius:2px;font-size:0.85rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer}
-    footer{background:var(--charcoal);padding:2rem 8%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;border-top:2px solid var(--dark-brown)}
-    .footer-logo{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--tan);font-weight:700}
-    .footer-copy{font-size:0.8rem;color:#6a5040}
-    .footer-links{display:flex;gap:1.5rem}
-    .footer-links a{color:var(--brown);font-size:0.8rem;text-decoration:none}
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #f5ede0;
+      --sand: #e8d5b7;
+      --tan: #c9a97a;
+      --brown: #8b6340;
+      --dark-brown: #4a3320;
+      --charcoal: #2c2218;
+      --rust: #b05c2a;
+      --warm-white: #faf6f0;
+      --text: #3a2a1a;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Lato', sans-serif; background: var(--warm-white); color: var(--text); overflow-x: hidden; }
+
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(74,51,32,0.97); backdrop-filter: blur(8px);
+      padding: 0 5%; display: flex; align-items: center;
+      justify-content: space-between; height: 68px;
+      border-bottom: 2px solid var(--tan);
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--sand); letter-spacing: 1px; }
+    .nav-logo span { color: var(--tan); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--sand); text-decoration: none; font-size: 0.85rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--tan); }
+    .nav-cta { background: var(--rust); color: #fff !important; padding: 8px 20px; border-radius: 2px; }
+
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(160deg, rgba(44,34,24,0.82) 0%, rgba(139,99,64,0.55) 100%),
+                  url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80') center/cover no-repeat;
+      display: flex; flex-direction: column; justify-content: center;
+      align-items: flex-start; padding: 0 8%; position: relative; overflow: hidden;
+    }
+    #hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 120px; background: linear-gradient(transparent, #eef4f0); }
+    .hero-tag { font-size: 0.78rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--tan); margin-bottom: 1.2rem; opacity: 0; animation: fadeUp 0.8s 0.2s forwards; }
+    .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem,7vw,5.5rem); font-weight: 900; line-height: 1.1; color: var(--cream); max-width: 720px; opacity: 0; animation: fadeUp 0.8s 0.4s forwards; }
+    .hero-title em { color: var(--tan); font-style: normal; }
+    .hero-sub { margin-top: 1.4rem; font-size: 1.1rem; font-weight: 300; color: var(--sand); max-width: 500px; line-height: 1.7; opacity: 0; animation: fadeUp 0.8s 0.6s forwards; }
+    .hero-btns { display: flex; gap: 1rem; margin-top: 2.2rem; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s 0.8s forwards; }
+    .btn-primary { background: var(--rust); color: #fff; padding: 14px 32px; border: none; border-radius: 2px; font-size: 0.85rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; text-decoration: none; transition: background 0.2s; }
+    .btn-primary:hover { background: #8f4820; }
+    .btn-outline { background: transparent; color: var(--cream); padding: 14px 32px; border: 2px solid var(--tan); border-radius: 2px; font-size: 0.85rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; text-decoration: none; transition: all 0.2s; }
+
+    /* STATS */
+    .stats-bar { display: flex; background: var(--dark-brown); border-top: 3px solid var(--tan); }
+    .stat { flex: 1; text-align: center; padding: 2rem 1rem; border-right: 1px solid rgba(201,169,122,0.2); }
+    .stat:last-child { border-right: none; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 700; color: var(--tan); }
+    .stat-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--sand); margin-top: 4px; }
+
+    section { padding: 90px 8%; }
+    .section-tag { font-size: 0.75rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--rust); margin-bottom: 0.7rem; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem,4vw,3rem); font-weight: 700; color: var(--dark-brown); line-height: 1.2; max-width: 580px; }
+    .section-sub { margin-top: 1rem; font-size: 1rem; color: #7a6050; line-height: 1.8; max-width: 560px; }
+    .divider { width: 60px; height: 4px; background: var(--tan); margin: 1.2rem 0; }
+
+    /* ── ABOUT — Soft Sage Green ── */
+    #about {
+      background: #eef4f0;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+    }
+    .about-img { border-radius: 4px; overflow: hidden; position: relative; height: 460px; }
+    .about-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .about-badge { position: absolute; bottom: 24px; right: 24px; background: var(--dark-brown); color: var(--cream); padding: 16px 20px; text-align: center; border-left: 4px solid var(--rust); }
+    .about-badge strong { font-family: 'Playfair Display', serif; display: block; font-size: 2rem; color: var(--tan); }
+    .about-badge span { font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; }
+
+    /* ── SERVICES — Light Steel Blue ── */
+    #services { background: #edf2fa; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .service-card { background: #fff; border: 1px solid #ccd8ee; padding: 2.2rem 1.8rem; border-radius: 4px; transition: transform 0.25s, box-shadow 0.25s; position: relative; overflow: hidden; }
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 0; background: var(--rust); transition: height 0.3s; }
+    .service-card:hover::before { height: 100%; }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(30,60,120,0.12); }
+    .service-icon { font-size: 2.4rem; margin-bottom: 1rem; }
+    .service-name { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--dark-brown); margin-bottom: 0.6rem; }
+    .service-desc { font-size: 0.92rem; color: #4a5a70; line-height: 1.75; }
+
+    /* ── PROCESS — Deep Charcoal ── */
+    #process { background: #2c2218; color: var(--cream); }
+    #process .section-title { color: var(--sand); }
+    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); margin-top: 3.5rem; }
+    .step { text-align: center; padding: 0 1.5rem; }
+    .step-num { width: 72px; height: 72px; background: var(--rust); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; margin: 0 auto 1.2rem; }
+    .step-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--sand); margin-bottom: 0.5rem; }
+    .step-desc { font-size: 0.85rem; color: var(--tan); line-height: 1.65; }
+
+    /* ── PROJECTS — Dark Navy ── */
+    #projects { background: #1a2535; }
+    #projects .section-tag { color: var(--tan); }
+    #projects .section-title { color: var(--sand); }
+    #projects .divider { background: var(--rust); }
+    .projects-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 3rem; }
+    .proj-card { border-radius: 4px; overflow: hidden; position: relative; cursor: zoom-in; height: 260px; }
+    .proj-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .proj-card:hover img { transform: scale(1.06); }
+    .proj-overlay { position: absolute; inset: 0; background: linear-gradient(transparent 40%, rgba(10,20,40,0.92)); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.4rem; opacity: 0; transition: opacity 0.3s; }
+    .proj-card:hover .proj-overlay { opacity: 1; }
+    .proj-cat { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--tan); margin-bottom: 4px; }
+    .proj-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #fff; }
+
+    /* ── WHY — Warm Amber/Ivory ── */
+    #why { background: #fdf3e3; }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 2rem; margin-top: 3rem; }
+    .why-item { display: flex; gap: 1.2rem; align-items: flex-start; }
+    .why-icon { width: 50px; height: 50px; min-width: 50px; background: var(--rust); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; }
+    .why-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--dark-brown); margin-bottom: 0.3rem; }
+    .why-desc { font-size: 0.88rem; color: #6a5030; line-height: 1.7; }
+
+    /* ── TESTIMONIALS — Soft Lavender ── */
+    #testimonials { background: #f2eef8; }
+    .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.8rem; margin-top: 3rem; }
+    .testi-card { background: #fff; border: 1px solid #ddd0f0; padding: 2rem; border-radius: 4px; border-top: 4px solid var(--rust); box-shadow: 0 4px 18px rgba(100,70,160,0.07); }
+    .testi-text { font-size: 0.95rem; color: #3a2a50; line-height: 1.8; font-style: italic; margin-bottom: 1.2rem; }
+    .testi-author { display: flex; align-items: center; gap: 0.9rem; }
+    .testi-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--tan); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--dark-brown); }
+    .testi-name { font-weight: 700; color: var(--dark-brown); font-size: 0.9rem; }
+    .testi-role { font-size: 0.78rem; color: var(--brown); }
+
+    /* ── CONTACT — Deep Teal-Navy ── */
+    #contact { background: #132030; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    #contact .section-tag { color: var(--tan); }
+    #contact .section-title { color: var(--sand); }
+    #contact .section-sub { color: #7ab8cc; }
+    .contact-info { margin-top: 2rem; display: flex; flex-direction: column; gap: 1.5rem; }
+    .contact-item { display: flex; gap: 1rem; align-items: flex-start; }
+    .c-icon { font-size: 1.3rem; min-width: 28px; margin-top: 2px; }
+    .c-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--tan); margin-bottom: 3px; }
+    .c-val { color: var(--sand); font-size: 0.95rem; }
+    #contact form { background: var(--cream); padding: 2.5rem; border-radius: 4px; }
+    .form-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--dark-brown); margin-bottom: 1.5rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 1rem; }
+    label { font-size: 0.78rem; font-weight: 700; letter-spacing: 1px; color: var(--brown); text-transform: uppercase; }
+    input, textarea, select { padding: 11px 14px; border: 1px solid var(--sand); border-radius: 2px; background: var(--warm-white); font-family: 'Lato', sans-serif; font-size: 0.92rem; color: var(--text); width: 100%; }
+    textarea { resize: vertical; min-height: 110px; }
+    .form-submit { width: 100%; padding: 14px; background: var(--rust); color: #fff; border: none; border-radius: 2px; font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
+    .form-submit:hover { background: #8f4820; }
+
+    /* FOOTER */
+    footer { background: var(--charcoal); padding: 2rem 8%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; border-top: 2px solid var(--dark-brown); }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--tan); font-weight: 700; }
+    .footer-copy { font-size: 0.8rem; color: #6a5040; }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { color: var(--brown); font-size: 0.8rem; text-decoration: none; }
 
     /* LIGHTBOX */
-    .lightbox-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;align-items:center;justify-content:center;flex-direction:column}
-    .lightbox-overlay.active{display:flex}
-    .lightbox-img{max-width:92vw;max-height:82vh;object-fit:contain;border-radius:4px;box-shadow:0 8px 60px rgba(0,0,0,0.7)}
-    .lightbox-caption{margin-top:1rem;color:var(--tan);font-family:'Playfair Display',serif;font-size:1rem;letter-spacing:1px;text-align:center}
-    .lightbox-close{position:fixed;top:20px;right:28px;font-size:2.2rem;color:#fff;cursor:pointer;line-height:1;transition:color 0.2s;z-index:10000}
-    .lightbox-close:hover{color:var(--tan)}
-    .lightbox-prev,.lightbox-next{position:fixed;top:50%;transform:translateY(-50%);font-size:2.5rem;color:#fff;cursor:pointer;background:rgba(74,51,32,0.6);padding:10px 18px;border-radius:2px;user-select:none;transition:background 0.2s;z-index:10000}
-    .lightbox-prev{left:16px}
-    .lightbox-next{right:16px}
-    .lightbox-prev:hover,.lightbox-next:hover{background:var(--rust)}
+    .lightbox-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; align-items: center; justify-content: center; flex-direction: column; }
+    .lightbox-overlay.active { display: flex; }
+    .lightbox-img { max-width: 92vw; max-height: 82vh; object-fit: contain; border-radius: 4px; box-shadow: 0 8px 60px rgba(0,0,0,0.7); }
+    .lightbox-caption { margin-top: 1rem; color: var(--tan); font-family: 'Playfair Display', serif; font-size: 1rem; letter-spacing: 1px; text-align: center; }
+    .lightbox-close { position: fixed; top: 20px; right: 28px; font-size: 2.2rem; color: #fff; cursor: pointer; line-height: 1; transition: color 0.2s; z-index: 10000; }
+    .lightbox-close:hover { color: var(--tan); }
+    .lightbox-prev, .lightbox-next { position: fixed; top: 50%; transform: translateY(-50%); font-size: 2.5rem; color: #fff; cursor: pointer; background: rgba(74,51,32,0.6); padding: 10px 18px; border-radius: 2px; user-select: none; transition: background 0.2s; z-index: 10000; }
+    .lightbox-prev { left: 16px; }
+    .lightbox-next { right: 16px; }
+    .lightbox-prev:hover, .lightbox-next:hover { background: var(--rust); }
 
-    @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
 
-    @media(max-width:900px){
-      #about,#contact{grid-template-columns:1fr;gap:2.5rem}
-      .projects-grid{grid-template-columns:1fr 1fr}
-      .proj-card:first-child{grid-row:span 1}
-      .nav-links{display:none}
-      .form-row{grid-template-columns:1fr}
+    @media (max-width: 900px) {
+      #about, #contact { grid-template-columns: 1fr; gap: 2.5rem; }
+      .projects-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .form-row { grid-template-columns: 1fr; }
     }
-    @media(max-width:600px){
-      section{padding:60px 6%}
-      .stats-bar{flex-wrap:wrap}
-      .stat{flex:0 0 50%}
-      .projects-grid{grid-template-columns:1fr}
+    @media (max-width: 600px) {
+      section { padding: 60px 6%; }
+      .stats-bar { flex-wrap: wrap; }
+      .stat { flex: 0 0 50%; }
+      .projects-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -165,13 +217,14 @@
     <div class="stat"><div class="stat-num">₹1 Cr+</div><div class="stat-label">Projects Estimated</div></div>
   </div>
 
+  <!-- ABOUT — Soft Sage Green -->
   <section id="about">
     <div class="about-img">
       <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80" alt="Construction site" />
       <div class="about-badge"><strong>2+</strong><span>Years of Trust</span></div>
       <div style="margin-top:14px;border-top:1px solid rgba(201,169,122,0.3);padding-top:12px;">
         <span style="font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--tan);">Directors</span><br>
-        <strong style="font-family:'Playfair Display',serif;color:var(--sand);font-size:1rem;">Aamir Salam &amp; Lazib</strong>
+        <strong style="font-family:'Playfair Display',serif;color:var(--dark-brown);font-size:1rem;">Aamir Salam &amp; Lazib</strong>
       </div>
     </div>
     <div>
@@ -184,6 +237,7 @@
     </div>
   </section>
 
+  <!-- SERVICES — Light Steel Blue -->
   <section id="services">
     <p class="section-tag">What We Do</p>
     <h2 class="section-title">Comprehensive Construction Solutions</h2>
@@ -198,6 +252,7 @@
     </div>
   </section>
 
+  <!-- PROCESS — Deep Charcoal -->
   <section id="process">
     <p class="section-tag" style="color:var(--tan)">How We Work</p>
     <h2 class="section-title">Our Simple 5-Step Process</h2>
@@ -211,6 +266,7 @@
     </div>
   </section>
 
+  <!-- PROJECTS — Dark Navy -->
   <section id="projects">
     <p class="section-tag">Our Work</p>
     <h2 class="section-title">Featured Projects</h2>
@@ -236,6 +292,7 @@
     </div>
   </section>
 
+  <!-- WHY — Warm Amber/Ivory -->
   <section id="why">
     <p class="section-tag">Why Choose Us</p>
     <h2 class="section-title">What Sets BuildCraft Contracting L.L.C Apart</h2>
@@ -250,6 +307,7 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS — Soft Lavender -->
   <section id="testimonials">
     <p class="section-tag">Client Words</p>
     <h2 class="section-title">What Our Clients Say</h2>
@@ -262,14 +320,16 @@
     </div>
   </section>
 
+  <!-- CONTACT — Deep Teal-Navy -->
   <section id="contact">
     <div>
-      <p class="section-tag" style="color:var(--tan)">Get In Touch</p>
+      <p class="section-tag">Get In Touch</p>
       <h2 class="section-title">Let's Discuss Your Project</h2>
       <div class="divider" style="background:var(--rust)"></div>
       <p class="section-sub">Ready to start your construction or design project? Reach out for a free consultation and cost estimate.</p>
       <div class="contact-info">
         <div class="contact-item"><div class="c-icon">📍</div><div><div class="c-label">Office Address</div><div class="c-val">Delhi – 110025</div></div></div>
+        <div class="contact-item"><div class="c-icon">✉️</div><div><div class="c-label">Email</div><div class="c-val">buildcraftcontracting@gmail.com</div></div></div>
         <div class="contact-item"><div class="c-icon">🕐</div><div><div class="c-label">Working Hours</div><div class="c-val">Mon – Sat: 9:00 AM – 7:00 PM</div></div></div>
       </div>
     </div>
@@ -277,7 +337,6 @@
     <form action="https://formspree.io/f/xlgooalr" method="POST">
       <div class="form-title">Request a Free Quote</div>
 
-      <!-- Basic Info -->
       <div class="form-row">
         <div class="form-group"><label>Your Name</label><input type="text" name="name" placeholder="Full Name" required /></div>
         <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required /></div>
@@ -314,7 +373,6 @@
           <option>Other</option>
         </select>
       </div>
-
       <div class="form-row">
         <div class="form-group">
           <label>Estimated Budget</label>
@@ -338,7 +396,6 @@
           </select>
         </div>
       </div>
-
       <div class="form-group">
         <label>Expected Time Duration</label>
         <select name="duration">
@@ -411,7 +468,6 @@
         <label>Any Additional Requirements</label>
         <textarea name="message" placeholder="Tell us anything extra — location, special features, materials preference, etc."></textarea>
       </div>
-
       <button type="submit" class="form-submit">Send My Enquiry →</button>
     </form>
   </section>
@@ -437,7 +493,6 @@
   </div>
 
   <script>
-    // Scroll-in animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -454,7 +509,6 @@
       observer.observe(el);
     });
 
-    // Lightbox
     const cards = Array.from(document.querySelectorAll('.proj-card'));
     const overlay = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
@@ -473,21 +527,9 @@
       overlay.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
-
-    function closeLightbox() {
-      overlay.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    function showPrev() {
-      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-      openLightbox(currentIndex);
-    }
-
-    function showNext() {
-      currentIndex = (currentIndex + 1) % cards.length;
-      openLightbox(currentIndex);
-    }
+    function closeLightbox() { overlay.classList.remove('active'); document.body.style.overflow = ''; }
+    function showPrev() { currentIndex = (currentIndex - 1 + cards.length) % cards.length; openLightbox(currentIndex); }
+    function showNext() { currentIndex = (currentIndex + 1) % cards.length; openLightbox(currentIndex); }
 
     cards.forEach((card, i) => card.addEventListener('click', () => openLightbox(i)));
     document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
