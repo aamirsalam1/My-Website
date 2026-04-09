@@ -1122,7 +1122,204 @@
         </div>
       </div>
     </div>
-    <form action="https://formspree.io/f/xlgooalr" method="POST">
+	<form action="https://formspree.io/f/xlgooalr" method="POST">
+  <div class="form-title">Request a Free Quote</div>
+
+  <!-- EXISTING FIELDS -->
+  <div class="form-row">
+    <div class="form-group"><label>Your Name</label><input type="text" name="name" placeholder="Full Name" required /></div>
+    <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required /></div>
+  </div>
+  <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="you@email.com" required /></div>
+  <div class="form-group"><label>Service Required</label>
+    <select name="service">
+      <option>Select a Service</option>
+      <option>Construction</option>
+      <option>Architectural Design</option>
+      <option>Cost Estimation / BOQ</option>
+      <option>Project Management</option>
+      <option>Interior Design</option>
+      <option>Structural Audit</option>
+      <option>AutoCad Design Only</option>
+    </select>
+  </div>
+
+  <!-- DIVIDER -->
+  <div style="border-top:1px solid var(--sand);margin:1.4rem 0;"></div>
+  <div style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--dark-brown);font-weight:700;margin-bottom:1rem;">🏗️ Building Requirements</div>
+
+  <!-- BUILDING TYPE -->
+  <div class="form-group">
+    <label>Type of Building</label>
+    <select name="building_type">
+      <option value="">Select Building Type</option>
+      <option>Residential House</option>
+      <option>Villa / Bungalow</option>
+      <option>Apartment / Flat</option>
+      <option>Commercial Building</option>
+      <option>Office Space</option>
+      <option>Warehouse / Industrial</option>
+      <option>Mixed Use (Residential + Commercial)</option>
+      <option>Other</option>
+    </select>
+  </div>
+
+  <!-- BUDGET + FLOORS -->
+  <div class="form-row">
+    <div class="form-group">
+      <label>Estimated Budget</label>
+      <select name="budget">
+        <option value="">Select Budget Range</option>
+        <option>Below ₹10 Lakhs</option>
+        <option>₹10 – ₹25 Lakhs</option>
+        <option>₹25 – ₹50 Lakhs</option>
+        <option>₹50 Lakhs – ₹1 Crore</option>
+        <option>₹1 Crore – ₹3 Crore</option>
+        <option>Above ₹3 Crore</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Number of Floors</label>
+      <select name="floors">
+        <option value="">Select Floors</option>
+        <option>Ground Floor Only (G)</option>
+        <option>G + 1</option>
+        <option>G + 2</option>
+        <option>G + 3</option>
+        <option>G + 4</option>
+        <option>G + 5 or more</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- TIME DURATION -->
+  <div class="form-group">
+    <label>Expected Time Duration</label>
+    <select name="duration">
+      <option value="">Select Duration</option>
+      <option>Less than 3 Months</option>
+      <option>3 – 6 Months</option>
+      <option>6 – 12 Months</option>
+      <option>1 – 2 Years</option>
+      <option>More than 2 Years</option>
+    </select>
+  </div>
+
+  <!-- ROOMS -->
+  <div style="font-size:0.78rem;font-weight:700;letter-spacing:1px;color:var(--brown);text-transform:uppercase;margin-bottom:0.5rem;">Room Details (Per Floor)</div>
+  <div class="form-row">
+    <div class="form-group">
+      <label>Bedrooms</label>
+      <select name="bedrooms">
+        <option value="">Select</option>
+        <option>1</option><option>2</option><option>3</option>
+        <option>4</option><option>5</option><option>6+</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Hall / Living Room</label>
+      <select name="hall">
+        <option value="">Select</option>
+        <option>1</option><option>2</option><option>3+</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group">
+      <label>Kitchen</label>
+      <select name="kitchen">
+        <option value="">Select</option>
+        <option>1</option><option>2</option><option>3+</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Bathrooms / Toilets</label>
+      <select name="bathrooms">
+        <option value="">Select</option>
+        <option>1</option><option>2</option><option>3</option>
+        <option>4</option><option>5</option><option>6+</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group">
+      <label>Attached Bathrooms</label>
+      <select name="attached_bathrooms">
+        <option value="">Select</option>
+        <option>None</option><option>1</option><option>2</option>
+        <option>3</option><option>4+</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Balcony / Terrace</label>
+      <select name="balcony">
+        <option value="">Select</option>
+        <option>None</option><option>1</option><option>2</option><option>3+</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- LAND AREA -->
+  <div style="font-size:0.78rem;font-weight:700;letter-spacing:1px;color:var(--brown);text-transform:uppercase;margin-bottom:0.5rem;margin-top:0.4rem;">Land / Plot Area</div>
+  <div class="form-row">
+    <div class="form-group">
+      <label>Length (in ft)</label>
+      <input type="number" name="land_length" placeholder="e.g. 30" min="1" />
+    </div>
+    <div class="form-group">
+      <label>Breadth (in ft)</label>
+      <input type="number" name="land_breadth" placeholder="e.g. 40" min="1" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Total Area (if known)</label>
+    <input type="text" name="total_area" placeholder="e.g. 1200 sq.ft or 200 sq. yards" />
+  </div>
+
+  <!-- LIFT + PARKING -->
+  <div style="border-top:1px solid var(--sand);margin:1.2rem 0;"></div>
+  <div style="font-size:0.78rem;font-weight:700;letter-spacing:1px;color:var(--brown);text-transform:uppercase;margin-bottom:0.8rem;">Facilities & Extras</div>
+  <div class="form-row">
+    <div class="form-group">
+      <label>Lift / Elevator Needed?</label>
+      <select name="lift">
+        <option value="">Select</option>
+        <option>No</option>
+        <option>Yes – 1 Lift</option>
+        <option>Yes – 2 Lifts</option>
+        <option>Yes – More than 2</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Parking Type</label>
+      <select name="parking">
+        <option value="">Select</option>
+        <option>No Parking Needed</option>
+        <option>Open Surface Parking</option>
+        <option>Covered Parking</option>
+        <option>Underground Basement Parking</option>
+        <option>Multi-Level Parking</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Number of Parking Spaces</label>
+    <select name="parking_count">
+      <option value="">Select</option>
+      <option>1</option><option>2</option><option>3</option>
+      <option>4</option><option>5 – 10</option><option>10+</option>
+    </select>
+  </div>
+
+  <!-- PROJECT DETAILS (existing) -->
+  <div style="border-top:1px solid var(--sand);margin:1.2rem 0;"></div>
+  <div class="form-group">
+    <label>Any Additional Requirements</label>
+    <textarea name="message" placeholder="Tell us anything extra — location, special features, materials preference, etc."></textarea>
+  </div>
+
+  <button type="submit" class="form-submit">Send My Enquiry →</button>
+</form>
     <div class="form-title">Request a Free Quote</div>
     <div class="form-row">
       <div class="form-group"><label>Your Name</label><input type="text" name="name" placeholder="Full Name" required /></div>
